@@ -1,0 +1,60 @@
+<% counter = 1 %>
+<div class="container">
+<h1>Weather Forecast for <%= name %></h1>
+<br>
+<table>
+  <th>Average Temp</th>
+  <th>Low Temp</th>
+  <th>High Temp</th>
+  <th>Barometric Pressure</th>
+  <th>Humidity</th>
+  <th>Conditions</th>
+  <th>Date/Times</th>
+  <% parse_data.each do |stuff| %>
+    <tr>
+      <% if counter.even? %>
+        <div class="even">
+      <% else %>
+        <div class="odd">
+      <% end %>
+      <% counter += 1 %>
+      <td>
+        <%=  stuff['main']['temp'].to_s + "&#8457;" %>
+      </td>
+      <td>
+        <%=  stuff['main']['temp_min'].to_s + "&#8457;" %>
+      </td>
+      <td>
+        <%=  stuff['main']['temp_max'].to_s + "&#8457;" %>
+      </td>
+      <td>
+        <%=  stuff['main']['pressure'].to_s + "mb" %>
+      </td>
+      <td>
+        <%=  stuff['main']['humidity'].to_s + "%"   %>
+      </td>
+      <td>
+        <% myweather = stuff['weather'] %>
+        <%=  myweather[0]['main'] %>
+      </td>
+      <td>
+        <% datetext = stuff['dt_txt'].to_s %>
+        <% d1 = DateTime.strptime(datetext, "%Y-%m-%d %H:%M:%S") %>
+        <%= d1.strftime("%b %d, %Y %I:%M %P") %>
+      </td>
+    </tr>
+  </div>
+  <% end %>
+
+
+
+</table>
+
+
+
+<hr noshade>
+
+
+Powered by the <a href = 'http://openweathermap.org/' target = _new>Open Weather Map API</a>
+</div>
+<!-- end div class container -->

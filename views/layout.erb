@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- Styles -->
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/custom.css" rel="stylesheet">
+  <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+  <!-- JQuery via Google and local fallback -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <!--Bootstrap jQuery plugins, compiled and minified -->
+  <script src="/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      padding-top: 80px; /*put below navbar at top */
+    }</style>
+    <title>Weather Forecast for <%= name %></title>
+</head>
+
+
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#">Weather Forecasts</a></li>
+
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+
+    </ul>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+  <body>
+    <%= yield %>
+
+
+    </body>
+    </html>

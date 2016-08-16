@@ -1,0 +1,50 @@
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+body { padding-top: 70px; }
+
+.myNavbar   {
+    background-color: #811B9D;
+    color:#811B9D;
+    border: 1px solid #333;
+ }
+
+ .navbar-inverse {
+    background-color: #083F8A;
+    border-color: #083F8A;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #AFB826;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #E7E7E7;
+    color: #555555;
+}
+
+th {background: #94DAD2;
+    padding: 10px;
+    }
+
+td {
+
+        text-align: center;
+    }
+
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
